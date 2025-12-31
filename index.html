@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍅 Pomodoro-Tomato</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍅</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍅 pomodoro-tomato 🍅</h1>
+        </header>
+
+        <main>
+            <!-- Mode Selector -->
+            <div class="mode-selector">
+                <button class="mode-btn active" data-mode="work" data-time="25">작업</button>
+                <button class="mode-btn" data-mode="short-break" data-time="5">휴식</button>
+                <button class="mode-btn" data-mode="long-break" data-time="15">긴 휴식</button>
+            </div>
+
+            <!-- Timer Display -->
+            <div class="timer-container">
+                <div class="timer-ring">
+                    <svg class="progress-ring" viewBox="0 0 200 200">
+                        <circle class="progress-ring-bg" cx="100" cy="100" r="90"/>
+                        <circle class="progress-ring-circle" cx="100" cy="100" r="90"/>
+                    </svg>
+                    <div class="timer-display">
+                        <span id="minutes">25</span>
+                        <span class="colon">:</span>
+                        <span id="seconds">00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <button id="startBtn" class="control-btn primary">
+                    <span class="btn-icon">▶</span>
+                    <span class="btn-text">시작</span>
+                </button>
+                <button id="resetBtn" class="control-btn secondary">
+                    <span class="btn-icon">↺</span>
+                    <span class="btn-text">리셋</span>
+                </button>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-value" id="todayCount">0</span>
+                    <span class="stat-label">오늘 완료</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-value" id="totalCount">0</span>
+                    <span class="stat-label">총 완료</span>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>집중하세요. 한 번에 하나씩. 🍅</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
