@@ -12,10 +12,13 @@
 
 ## 실행 방법
 
-### 방법 1: 직접 열기
+### 방법 1: URL 접속
+`https://kennethjhan.github.io/pomodoro-tomato`
+
+### 방법 2: 직접 열기
 `index.html` 파일을 브라우저에서 직접 열기
 
-### 방법 2: 로컬 서버 사용 (권장)
+### 방법 3: 로컬 서버 사용
 ```bash
 # Python 3
 python -m http.server 8000
